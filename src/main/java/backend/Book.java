@@ -1,35 +1,40 @@
 package backend;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Random;
 
 /***
- * The book class creates a book object that the librarian can access, they can :
+ * The Book class creates a Book object that the librarian can access, they can :
  * -Add books to the inventory
- * - Add books to the account of a client that borrows it
+ * - Add books to the account of a Client that borrows it
  * - Check their availability in the store
  */
-public class book {
+public class Book {
     private String title, author;
-    private int numberOfPages, yearOfPublish;
+    private int numberOfPages, yearOfPublish, bookid;
     private Long ISBN;
     private String inventoryInfo;
     private boolean availability;
+    private int numberOfBooks;
+    private Random bookId;
 
 
-    public book(String title, String author, int numberOfPages, int yearOfPublish, long ISBN){
+    public Book(String title, String author, int numberOfPages, int yearOfPublish, long ISBN) {
         this.title = title;
         this.author = author;
         this.numberOfPages = numberOfPages;
         this.yearOfPublish = yearOfPublish;
         this.ISBN = ISBN;
         this.availability = true;
+        numberOfBooks++;
+
     }
 
     /**
-     * Function that adds the book to the book inventory database (sadly rn it's just a fucking text file)
+     * Function that adds the Book to the Book inventory database (sadly rn it's just a fucking text file)
+     *
      * @throws IOException
      */
     public void addToInventory() throws IOException {
@@ -37,7 +42,7 @@ public class book {
         Titre: \{title},Author: \{author}, pages: \{numberOfPages},Publish Year : \{yearOfPublish}isbn: \{ISBN}
         """);
 
-        try{
+        try {
             FileWriter wr = new FileWriter("dataBase/file.txt");
             BufferedWriter bw = new BufferedWriter(wr);
 
@@ -49,4 +54,14 @@ public class book {
 
     }
 
+    public int getNumberOfBooks() {
+        return numberOfBooks;
+    }
+
+    //Devrait generer un book id pour que l'on puisse retrouver manipuler les livres avec
+    private int generateBookid() {
+        Random id = new Random(this.ISBN);
+
+    }
 }
+
