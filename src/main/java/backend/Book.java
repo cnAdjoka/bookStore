@@ -17,7 +17,7 @@ public class Book {
     private Long ISBN;
     private String inventoryInfo;
     private boolean availability;
-    private int numberOfBooks;
+    private static int numberOfBooks;
     private Random bookId;
 
 
@@ -31,6 +31,26 @@ public class Book {
         numberOfBooks++;
 
     }
+
+    //Getter and Setters for the book attributes
+
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getTitle(){
+        return title;
+    }
+
+    public void setAuthor (String author){
+        this.author = author;
+    }
+
+    public String getAuthor(){
+        return author;
+    }
+
 
     /**
      * Function that adds the Book to the Book inventory database (sadly rn it's just a fucking text file)
@@ -54,13 +74,14 @@ public class Book {
 
     }
 
-    public int getNumberOfBooks() {
+    public static int getNumberOfBooks() {
         return numberOfBooks;
     }
 
     //Devrait generer un book id pour que l'on puisse retrouver manipuler les livres avec
     private int generateBookid() {
         Random id = new Random(this.ISBN);
+        return 0;
 
     }
 }
