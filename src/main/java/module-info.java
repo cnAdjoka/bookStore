@@ -8,6 +8,6 @@ module org.example.bookstore {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
 
-    opens org.example.bookstore to javafx.fxml;
-    exports org.example.bookstore;
+    exports GUIsetUp;
+    opens GUIsetUp to javafx.fxml;
 }

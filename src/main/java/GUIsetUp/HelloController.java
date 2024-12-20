@@ -1,4 +1,4 @@
-package org.example.bookstore;
+package GUIsetUp;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

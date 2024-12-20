@@ -2,8 +2,10 @@
  * @author Chris-Noah Adjoka
  */
 
-package org.example.bookstore;
+package GUIsetUp;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
@@ -16,30 +18,45 @@ public class storeY extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         VBox root = new VBox();
-        Scene sceneDepart = new Scene(root, 370, 240);
+        Scene sceneDepart = new Scene(root, 570, 440);
         stage.setTitle("storeY");
         stage.setScene(sceneDepart);
+        stage.show();
 
         //Set of navigation buttons
         HBox startOptions  = new HBox();
         Button newClient = new Button("New Client");
         Button bookToInventory = new Button ("New Book");
+        Button exit = new Button("Exit");
         startOptions.getChildren().add(newClient);
         startOptions.getChildren().add(bookToInventory);
+        startOptions.getChildren().add(exit);
         root.getChildren().add(startOptions);
 
-        //Scene if the user chooses to add a book to the database
+        //EventHandlers
+
+        newClient.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
 
 
+            }
+        });
+
+        bookToInventory.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
 
 
+            }
+        });
 
-
-
-
-
-
-        stage.show();
+        exit.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                stage.close();
+            }
+        });
 
 
 

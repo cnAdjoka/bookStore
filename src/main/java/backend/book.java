@@ -33,17 +33,16 @@ public class book {
      * @throws IOException
      */
     public void addToInventory() throws IOException {
-        inventoryInfo = ("Titre: " + title + ","+
-                         "Author: " + author + "," +
-                         " pages: "+ numberOfPages + "," +
-                         "Publish Year : "+ yearOfPublish+
-                         "isbn: "+ ISBN + "\n"  );
+        inventoryInfo = (STR."""
+        Titre: \{title},Author: \{author}, pages: \{numberOfPages},Publish Year : \{yearOfPublish}isbn: \{ISBN}
+        """);
 
         try{
             FileWriter wr = new FileWriter("dataBase/file.txt");
             BufferedWriter bw = new BufferedWriter(wr);
 
             bw.write(inventoryInfo);
+            bw.close();
         } catch (IOException e) {
             System.out.print("Error: Data base file not found");
         }
