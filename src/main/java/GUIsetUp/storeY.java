@@ -11,10 +11,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -56,6 +58,8 @@ public class storeY extends Application {
                 //Outputs a new Vbox that is the interface used to add a book to the library.
 
                 VBox bookAdder = new VBox();
+
+
                 Label titleLabel = new Label("Book title: ");
                 TextArea bookTitle = new TextArea();
 
@@ -100,9 +104,9 @@ public class storeY extends Application {
 
     }
 
-    public static void main(String[] args) {
-//        launch();
+    public static void main(String[] args)  {
+        launch();
         Book test = new Book("Harry Potter","Jk Rowling",540,2007, 978316148100L);
-        System.out.print(test.);
+
     }
 }

@@ -33,24 +33,25 @@ public class Book {
     }
 
     //Getter and Setters for the book attributes
+    public void setTitle(String title) {this.title = title;}
 
+    public String getTitle(){return title;}
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+    public void setAuthor (String author){this.author = author;}
 
-    public String getTitle(){
-        return title;
-    }
+    public String getAuthor(){return author;}
 
-    public void setAuthor (String author){
-        this.author = author;
-    }
+    public void setNumberOfPages (int numOfPages){this.numberOfPages = numOfPages;}
 
-    public String getAuthor(){
-        return author;
-    }
+    public int getNumberOfPages(){return numberOfPages;}
 
+    public void setYearOfPublish(int yearOfPublish) {this.yearOfPublish = yearOfPublish;}
+
+    public int getYearOfPublish(){return yearOfPublish;}
+
+    public void setISBN(long isbn){this.ISBN = isbn;}
+
+    public long getISBN(){return ISBN;}
 
     /**
      * Function that adds the Book to the Book inventory database (sadly rn it's just a fucking text file)
