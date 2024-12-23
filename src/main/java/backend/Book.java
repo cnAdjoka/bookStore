@@ -57,11 +57,14 @@ public class Book {
      * Function that adds the Book to the Book inventory database (sadly rn it's just a fucking text file)
      *
      * @throws IOException
+     *
+     *
      */
     public void addToInventory() throws IOException {
-        inventoryInfo = (STR."""
-        Titre: \{title},Author: \{author}, pages: \{numberOfPages},Publish Year : \{yearOfPublish}isbn: \{ISBN}
-        """);
+        inventoryInfo = ("Titre");
+//        inventoryInfo = (STR."""
+//        Titre: \{title},Author: \{author}, pages: \{numberOfPages},Publish Year : \{yearOfPublish}isbn: \{ISBN}
+//        """);
 
         try {
             FileWriter wr = new FileWriter("dataBase/file.txt");
@@ -75,14 +78,20 @@ public class Book {
 
     }
 
+
+
     public static int getNumberOfBooks() {
         return numberOfBooks;
     }
 
     //Devrait generer un book id pour que l'on puisse retrouver manipuler les livres avec
-    private int generateBookid() {
+    public String generateBookid() {
         Random id = new Random(this.ISBN);
-        return 0;
+        System.out.print(id);
+        return ("poo");
+
+
+
 
     }
 }

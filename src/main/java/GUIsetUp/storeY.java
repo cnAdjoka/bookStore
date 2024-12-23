@@ -105,8 +105,9 @@ public class storeY extends Application {
     }
 
     public static void main(String[] args)  {
-        launch();
+//        launch();
         Book test = new Book("Harry Potter","Jk Rowling",540,2007, 978316148100L);
+        test.generateBookid();
 
     }
 }
