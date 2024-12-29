@@ -19,7 +19,7 @@ public class StoreY extends Application {
     public void start(Stage stage) throws IOException {
         VBox root = new VBox();
         Scene sceneDepart = new Scene(root, 570, 440);
-        stage.setTitle("storeY");
+        stage.setTitle("StoreY");
         stage.setScene(sceneDepart);
         stage.show();
 

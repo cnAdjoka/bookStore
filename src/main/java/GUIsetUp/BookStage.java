@@ -23,7 +23,7 @@ public class BookStage extends Application {
     public void start(Stage stage) {
         VBox root = new VBox();
         Scene sceneNewClient = new Scene(root, 570, 440);
-        stage.setTitle("storeY");
+        stage.setTitle("New Book");
         stage.setScene(sceneNewClient);
         stage.show();
 
@@ -77,6 +77,13 @@ public class BookStage extends Application {
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
+            }
+        });
+
+        save.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+
             }
         });
 

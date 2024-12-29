@@ -18,7 +18,7 @@ public class ClientStage extends Application{
     public void start(Stage stage){
         VBox root = new VBox();
         Scene sceneNewClient = new Scene(root, 570, 440);
-        stage.setTitle("storeY");
+        stage.setTitle("New Client");
         stage.setScene(sceneNewClient);
         stage.show();
 
@@ -79,6 +79,11 @@ public class ClientStage extends Application{
                     throw new RuntimeException(e);
                 }
             }
+        });
+
+        exit.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {stage.close();}
         });
     }
 
