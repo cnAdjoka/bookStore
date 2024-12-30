@@ -1,5 +1,6 @@
 package GUIsetUp;
 import backend.Client;
+import backend.MetaData;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -37,19 +38,15 @@ public class ClientStage extends Application{
 
         Label titleLabel = new Label("Name: ");
         TextArea clientName = new TextArea();
-        String name = clientName.getText();
 
         Label authorLabel = new Label("Date of birth: ");
         TextArea clientDateOfBirth= new TextArea();
-        String birth  = clientDateOfBirth.getText();
 
         Label isbnLabel = new Label("Address: ");
         TextArea clientAddress = new TextArea();
-        String address = clientAddress.getText();
 
         Label pagesLabel = new Label("Email Address: ");
         TextArea clientEmail =  new TextArea();
-        String email = clientEmail.getText();
 
 
 
@@ -62,8 +59,11 @@ public class ClientStage extends Application{
         save.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                Client client1 = new Client(name,address,birth,email);
-                System.out.println(client1.getName());
+                Client client1 = new Client(clientName.getText(),clientAddress.getText(),clientDateOfBirth.getText(),clientEmail.getText());
+
+
+
+
 
 
 

@@ -5,7 +5,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
 
-import static java.lang.StringTemplate.STR;
 
 /***
  * The Book class creates a Book object that the librarian can access, they can :
@@ -62,21 +61,7 @@ public class Book {
      *
      *
      */
-    public void addToInventory() throws IOException {
-        inventoryInfo = ("Tit: " + title + "," + "Aut: " + author + "," + "numPa: " + numberOfPages + ","+"yeaPu" + yearOfPublish + "," +"isbn" + ISBN  );
-
-
-        try {
-            FileWriter wr = new FileWriter("dataBase/file.txt");
-            BufferedWriter bw = new BufferedWriter(wr);
-
-            bw.write(inventoryInfo);
-            bw.close();
-        } catch (IOException e) {
-            System.out.print("Error: Database file not found");
-        }
-
-    }
+//
 
 
 
@@ -84,7 +69,7 @@ public class Book {
         return numberOfBooks;
     }
 
-    //Devrait generer un book id pour que l'on puisse retrouver manipuler les livres avec
+    //Devrait generer un book id pour que l'on puisse retrouver, manipuler les livres avec
     public String generateBookid() {
         Random id = new Random(this.ISBN);
         System.out.print(id);
