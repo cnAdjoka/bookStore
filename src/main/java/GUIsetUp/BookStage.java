@@ -1,5 +1,6 @@
 package GUIsetUp;
 
+import backend.MetaData;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -83,6 +84,8 @@ public class BookStage extends Application {
         save.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+//                MetaData shelf = new MetaData();
+//                shelf.addBookToShelf();
 
             }
         });

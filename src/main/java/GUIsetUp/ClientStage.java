@@ -59,7 +59,9 @@ public class ClientStage extends Application{
         save.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+
                 Client client1 = new Client(clientName.getText(),clientAddress.getText(),clientDateOfBirth.getText(),clientEmail.getText());
+
 
 
 

@@ -3,6 +3,7 @@
  */
 
 package GUIsetUp;
+import backend.MetaData;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -11,12 +12,16 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class StoreY extends Application {
+
+    //TODO : Check this thing 
+    public MetaData shelf;
+
     @Override
     public void start(Stage stage) throws IOException {
+
         VBox root = new VBox();
         Scene sceneDepart = new Scene(root, 570, 440);
         stage.setTitle("StoreY");
